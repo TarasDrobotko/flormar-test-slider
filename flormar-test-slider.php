@@ -21,12 +21,12 @@ define('FL_SLIDER_VERSION', '1.0.0');
 define('FL_SLIDER_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('FL_SLIDER_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-add_action('plugins_loaded', 'fl_init_slider_class');
+// add_action('plugins_loaded', 'fl_init_slider_class');
 
-function fl_init_slider_class()
-{
-    include_once(FL_SLIDER_PLUGIN_PATH . 'class-fl-test-slider.php');
-}
+// function fl_init_slider_class()
+// {
+//     include_once(FL_SLIDER_PLUGIN_PATH . 'class-fl-test-slider.php');
+// }
 
 /**
  * Check if WooCommerce plugin is active
@@ -118,3 +118,29 @@ function fl_load_plugin()
 
 // Action to load plugin after the main plugin is loaded
 add_action('plugins_loaded', 'fl_load_plugin', 15);
+
+add_shortcode('flormar-test-slider', 'fl_test_slider');
+
+function fl_test_slider($atts, $content)
+{
+    $atts = shortcode_atts(
+        array(
+            'max-price' => 50,
+            'min-price' => 10,
+        ),
+        $atts
+    );
+
+    extract($atts);
+
+    ob_start();
+
+    require_once 'partials/slider-content.php';
+
+    $output = ob_get_contents();
+    // do_action('inspect', ['output', $output]);
+    $slider =  $output;
+    ob_end_clean();
+
+    return $slider;
+}
