@@ -1,5 +1,102 @@
+@font-face {
+  font-family: "Arimo";
+  src: url("/wp-content/plugins/flormar-test-slider/assets/fonts/Arimo-Regular.ttf")
+      format("truetype"),
+    url("/wp-content/plugins/flormar-test-slider/assets/fonts/Arimo-Bold.ttf")
+      format("truetype");
+}
+
+.flormar-test-slider-block .container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1170px) {
+  .flormar-test-slider-block .container {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 div.flormar-test-slider-block {
   background-color: rgb(253, 237, 242);
-  width: 100%;
-  max-width: 100% !important;
+  width: calc(100%);
+  max-width: calc(100%) !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.flormar-test-slider-block .container > h2 {
+  font-size: 40px;
+  padding-top: 30px;
+  font-family: "Arimo";
+  font-weight: 400;
+}
+
+.woocommerce .flormar-test-slider {
+  font: Arial, sans-serif;
+}
+.woocommerce .flormar-test-slider li.product a.button {
+  display: none;
+}
+
+.woocommerce .flormar-test-slider li.product .woocommerce-LoopProduct-link h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.woocommerce .flormar-test-slider li.product span.price {
+  font-size: 24px;
+  color: #000;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.flormar-test-slider .slick-prev,
+.flormar-test-slider .slick-next {
+  height: 100%;
+  width: 120px;
+}
+
+.flormar-test-slider .slick-prev::before,
+.flormar-test-slider .slick-next::before {
+  display: inline-block;
+  color: #444;
+  width: 24px;
+  font-size: 40px;
+}
+
+.flormar-test-slider .slick-prev {
+  left: -110px;
+}
+
+.flormar-test-slider .slick-next {
+  right: -110px;
+}
+
+/* the slides */
+.slick-slider {
+  margin-inline: -30px;
+}
+
+.slick-slide > div {
+  margin-inline: 15px;
+}
+
+body.page main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 1170px) {
+  /* the slides */
+  .slick-slider {
+    margin-inline: -15px;
+  }
+
+  .slick-slide > div {
+    margin-inline: 7.5px;
+  }
 }

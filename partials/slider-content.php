@@ -1,7 +1,7 @@
 <div class="flormar-test-slider-block">
     <div class="container">
 
-        <h2>המוצרים הנמכרים ביותר </h2>
+        <h2><?php echo __('Best selling products', 'flormar-test-slider'); ?></h2>
 
 
         <?php
@@ -14,15 +14,17 @@
         $query = new WP_Query($args);
         if ($query->have_posts()) :
         ?>
-            <div class="flormar-test-slider">
-                <?php
+            <div class="woocommerce">
+                <ul class="products flormar-test-slider">
+                    <?php
 
-                while ($query->have_posts()) : $query->the_post();
+                    while ($query->have_posts()) : $query->the_post();
 
-                    wc_get_template_part('content', 'product');
+                        wc_get_template_part('content', 'product');
 
-                endwhile;
-                ?>
+                    endwhile;
+                    ?>
+                </ul>
             </div>
 
         <?php
