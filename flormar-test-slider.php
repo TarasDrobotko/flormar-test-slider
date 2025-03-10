@@ -112,6 +112,7 @@ function fl_load_plugin()
 // Action to load plugin after the main plugin is loaded
 add_action('plugins_loaded', 'fl_load_plugin', 15);
 
+
 add_shortcode('flormar-test-slider', 'fl_test_slider');
 
 function fl_test_slider($atts)
