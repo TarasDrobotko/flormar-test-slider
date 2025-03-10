@@ -114,13 +114,16 @@ add_action('plugins_loaded', 'fl_load_plugin', 15);
 
 add_shortcode('flormar-test-slider', 'fl_test_slider');
 
-function fl_test_slider($atts, $content)
+function fl_test_slider($atts)
 {
+    $defaults =  array(
+        'max-price' => -1,
+        'min-price' => 0,
+    );
+
     $atts = shortcode_atts(
-        array(
-            'max-price' => 50,
-            'min-price' => 10,
-        ),
+        $defaults,
+
         $atts
     );
 

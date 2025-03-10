@@ -11,11 +11,19 @@
   margin: 0 auto;
 }
 
+.products.flormar-test-slider {
+  margin-left: -15px;
+}
+
 @media (max-width: 1170px) {
   .flormar-test-slider-block .container {
     width: calc(100% - 40px);
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .flormar-test-slider-block .container > h2 {
+    font-size: 36px;
   }
 }
 
@@ -52,6 +60,10 @@ div.flormar-test-slider-block .container > h2 {
   color: #000;
   text-align: center;
   margin-top: 25px;
+}
+
+.no-products {
+  padding-bottom: 30px;
 }
 
 .flormar-test-slider .slick-prev,
