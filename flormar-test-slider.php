@@ -70,14 +70,14 @@ function fl_load_plugin()
         /**
          * Add Go To Settings Page
          */
-        function fl_goto_settings_page_link($links)
-        {
-            $goto_settings_link = array('<a href="' . admin_url('edit.php?post_type=product&page=flormar-test-slider') . '">' . __('Settings', 'flormar-test-slider') . '</a>');
+        // function fl_goto_settings_page_link($links)
+        // {
+        //     $goto_settings_link = array('<a href="' . admin_url('edit.php?post_type=product&page=flormar-test-slider') . '">' . __('Settings', 'flormar-test-slider') . '</a>');
 
-            return array_merge($links, $goto_settings_link);
-        }
+        //     return array_merge($links, $goto_settings_link);
+        // }
 
-        add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'fl_goto_settings_page_link');
+        // add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'fl_goto_settings_page_link');
 
         /**
          * Load Text Domain

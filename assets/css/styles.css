@@ -7,12 +7,13 @@
 }
 
 .flormar-test-slider-block .container {
-  max-width: 1080px;
-  margin: 0 auto;
+  max-width: 1080px !important;
+  margin: 0 auto !important;
 }
 
 .products.flormar-test-slider {
-  margin-left: -15px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 @media (max-width: 1170px) {
@@ -22,8 +23,26 @@
     padding-right: 20px;
   }
 
-  .flormar-test-slider-block .container > h2 {
+  div.flormar-test-slider-block .container > h2 {
     font-size: 36px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .woocommerce
+    .flormar-test-slider
+    li.product
+    .woocommerce-LoopProduct-link
+    h2.woocommerce-loop-product__title {
+    font-size: 16px;
+  }
+
+  .woocommerce
+    .flormar-test-slider
+    li.product
+    .woocommerce-LoopProduct-link
+    span.price {
+    font-size: 18px;
   }
 }
 
@@ -32,20 +51,28 @@ div.flormar-test-slider-block {
   width: calc(100%);
   max-width: calc(100%) !important;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -30px;
 }
 
-div.flormar-test-slider-block .container > h2 {
+.flormar-test-slider-block .container > h2 {
   font-size: 40px;
   padding-top: 30px;
   font-family: "Arimo";
   font-weight: 400;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .woocommerce .flormar-test-slider {
-  font: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 .woocommerce .flormar-test-slider li.product a.button {
   display: none;
+}
+
+div.woocommerce ul.products li.product,
+div.woocommerce-page ul.products li.product {
+  margin-bottom: 30px;
 }
 
 .woocommerce .flormar-test-slider li.product .woocommerce-LoopProduct-link h2 {
@@ -53,6 +80,9 @@ div.flormar-test-slider-block .container > h2 {
   font-weight: 700;
   color: #000;
   text-align: center;
+  margin-top: -5px;
+  padding-top: 20px;
+  border-top: 0.5px solid #6c6c6c;
 }
 
 .woocommerce .flormar-test-slider li.product span.price {

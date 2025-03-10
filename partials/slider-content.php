@@ -54,7 +54,7 @@
 
         <?php
         } else {
-            echo  '<p class="no-products">' . __("No Products was found in such price range.", 'flormar-test-slider') . '</p>';
+            echo  '<p class="no-products">' . __("No Products found in such price range.", 'flormar-test-slider') . '</p>';
         }
         wp_reset_postdata();
         ?>
